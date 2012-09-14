@@ -45,20 +45,24 @@ vows.describe('list_files').addBatch({
 	},
     'simple recursive list iterator': {
         topic: function() {
-			list_files(testdir,'','.*',this.callback);
+			var t = this;
+			var files = {};
+			list_files(testdir,'','.*',function(error,file) { files[file] = true; }, function(error) { t.callback(error,files); } );
 		},
-        'iterator': function(error,file,stat) {
+        'iterator': function(error,files) {
 			assert.isNull(error);
-			assert.isTrue(file === 'dir1/file1' || file === 'dir1/dir1_1/file1_1');
+			assert.deepEqual({ 'dir1/file1' : true, 'dir1/dir1_1/file1_1' : true, 'dir2/dir2_1/file2_1' : true }, files);
         }
 	},
     'filter recursive list iterator': {
         topic: function() {
-			list_files(testdir,'','.*_1',this.callback);
+			var t = this;
+			var files = {};
+			list_files(testdir,'','.*1_1',function(error,file) { files[file] = true; }, function(error) { t.callback(error,files); } );
 		},
-        'iterator': function(error,file,stat) {			
+        'iterator': function(error,files) {			
 			assert.isNull(error);
-			assert.isTrue(file === 'dir1/dir1_1/file1_1');
+			assert.deepEqual({ 'dir1/dir1_1/file1_1' : true}, files);
         }
 	}
 }).export(module);
