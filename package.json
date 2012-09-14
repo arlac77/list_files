@@ -1,0 +1,27 @@
+{
+ "name" : "list_files",
+ "description": "crals directory for files recursivly",
+ "version" : "0.1.0",
+ "private":  false,
+ "engines": { "node": ">=0.6" },
+ "author" : { "name" : "Markus Felten"
+            , "email" : "Markus.Felten@gmx.de"
+            },
+
+ "dependencies" : {
+     "async"        : ">=0.1"
+ },
+ "devDependencies" : {
+   	"vows"          : ">=0.6",
+  	"mkdirp"        : ">=0.3"
+ },
+
+ "scripts": { "test" : "vows tests/*.js --isolate --spec" },
+
+ "repository" : {
+  "type" : "git",
+  "url"  : "git@github.com:arlac77/list_files.git"
+  },
+
+  "main": "list_files.js"
+}
