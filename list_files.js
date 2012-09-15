@@ -9,8 +9,8 @@ var path     = require('path')
  * - base (String): source file
  * - dir (String): source file
  * - regex (String): source file
- * - iterator (Object): to be invoked for each matching file
- * - callback (Object): to be invoked at the end of the file list process
+ * - iterator (error,file,stats): to be invoked for each matching file
+ * - callback (error): to be invoked at the end of the file list process
  *
  * walks throug a direcotry and calls iterator. 
  **/
