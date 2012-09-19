@@ -47,22 +47,22 @@ vows.describe('list_files').addBatch({
         topic: function() {
 			var t = this;
 			var files = {};
-			list_files(testdir,'','.*',function(error,file) { files[file] = true; }, function(error) { t.callback(error,files); } );
+			list_files(testdir,'','.*',function(error,file,fstat) { files[file] = fstat.size; }, function(error) { t.callback(error,files); } );
 		},
         'iterator': function(error,files) {
 			assert.isNull(error);
-			assert.deepEqual({ 'dir1/file1' : true, 'dir1/dir1_1/file1_1' : true, 'dir2/dir2_1/file2_1' : true }, files);
+			assert.deepEqual({ 'dir1/file1' : 0, 'dir1/dir1_1/file1_1' : 0, 'dir2/dir2_1/file2_1' : 0 }, files);
         }
 	},
     'filter recursive list iterator': {
         topic: function() {
 			var t = this;
 			var files = {};
-			list_files(testdir,'','.*1_1',function(error,file) { files[file] = true; }, function(error) { t.callback(error,files); } );
+			list_files(testdir,'','.*1_1',function(error,file,fstat) { files[file] = fstat.size; }, function(error) { t.callback(error,files); } );
 		},
         'iterator': function(error,files) {			
 			assert.isNull(error);
-			assert.deepEqual({ 'dir1/dir1_1/file1_1' : true}, files);
+			assert.deepEqual({ 'dir1/dir1_1/file1_1' : 0 }, files);
         }
 	}
 }).export(module);
