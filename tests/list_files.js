@@ -8,13 +8,13 @@ var vows     = require('vows'),
 var testdir = path.join("/tmp","vows" + process.pid);
 
 mkdirp.sync(path.join(testdir,'dir1'),'0755');
-fs.writeFileSync(path.join(testdir,'dir1','file1'),'');
+fs.writeFileSync(path.join(testdir,'dir1','file1'),'123');
 
 mkdirp.sync(path.join(testdir,'dir1','dir1_1'),'0755');
-fs.writeFileSync(path.join(testdir,'dir1','dir1_1','file1_1'),'');
+fs.writeFileSync(path.join(testdir,'dir1','dir1_1','file1_1'),'1234');
 
 mkdirp.sync(path.join(testdir,'dir2','dir2_1'),'0755');
-fs.writeFileSync(path.join(testdir,'dir2','dir2_1','file2_1'),'');
+fs.writeFileSync(path.join(testdir,'dir2','dir2_1','file2_1'),'12345');
 
 vows.describe('list_files').addBatch({
     'none existing base dir': {
@@ -51,7 +51,7 @@ vows.describe('list_files').addBatch({
 		},
         'iterator': function(error,files) {
 			assert.isNull(error);
-			assert.deepEqual({ 'dir1/file1' : 0, 'dir1/dir1_1/file1_1' : 0, 'dir2/dir2_1/file2_1' : 0 }, files);
+			assert.deepEqual({ 'dir1/file1' : 3, 'dir1/dir1_1/file1_1' : 4, 'dir2/dir2_1/file2_1' : 5 }, files);
         }
 	},
     'filter recursive list iterator': {
@@ -62,7 +62,7 @@ vows.describe('list_files').addBatch({
 		},
         'iterator': function(error,files) {			
 			assert.isNull(error);
-			assert.deepEqual({ 'dir1/dir1_1/file1_1' : 0 }, files);
+			assert.deepEqual({ 'dir1/dir1_1/file1_1' : 4 }, files);
         }
 	}
 }).export(module);
