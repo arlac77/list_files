@@ -5,14 +5,13 @@ var path     = require('path')
    ,async    = require('async');
 
 /**
- * list_files(base, dir, regex, iterator, callback)
- * - base (String): source file
- * - dir (String): source file
- * - regex (String): source file
- * - iterator (error,file,stats): to be invoked for each matching file
- * - callback (error): to be invoked at the end of the file list process
+ * walks through a direcotry and calls iterator. 
+ * @param {String} base base directory
+ * @param {String} dir  starting directory
+ * @param {Regex} regex  file name pattern
+ * @param {Function(error,file,stats)} iterator  to be invoked for each matching file
+ * @param {Function(error)} callback  to be invoked at the end of the file list process
  *
- * walks throug a direcotry and calls iterator. 
  **/
 function list_files(base,dir,regex,iterator,callback)
 {

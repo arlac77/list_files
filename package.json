@@ -9,11 +9,13 @@
             },
 
  "dependencies" : {
-     "async"        : ">=0.1"
+     "async"        : ">=0.2.5"
  },
  "devDependencies" : {
    	"vows"          : ">=0.6",
-  	"mkdirp"        : ">=0.3"
+  	"mkdirp"        : ">=0.3",
+    "grunt-contrib-jshint" : "~0.1.0",
+	"grunt-jsdoc-plugin" : ">=0.1.4"
  },
 
  "scripts": { "test" : "vows tests/*.js --isolate --spec" },
