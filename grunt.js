@@ -14,12 +14,12 @@ module.exports = function(grunt) {
 	            src: ['*.js', 'tests/*.js'], 
 	            dest: 'doc'
 	        }
-	    },
+	},
     watch: {
       scripts: {
         files: '<config:lint.all>',
         tasks: 'lint test'
-    }
+    	}
     },
     jshint: {
       options: {
