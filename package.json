@@ -18,7 +18,8 @@
     "mkdirp": ">=0.3",
     "grunt": "~0.4.0",
     "grunt-jslint": "~0.2.5",
-    "grunt-jsdoc": "~0.2.3"
+    "grunt-jsdoc": "~0.2.3",
+    "grunt-vows-runner": "~0.1.0"
   },
   "scripts": {
     "test": "vows tests/*.js --isolate --spec"
