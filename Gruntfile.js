@@ -22,6 +22,7 @@ module.exports = function(grunt) {
 	allTests : "tests/*"
   });
 
+  grunt.registerTask('test', [ 'vows' ] );
   grunt.registerTask('default', [ 'jslint' ] );
   grunt.loadNpmTasks('grunt-jsdoc');
   grunt.loadNpmTasks('grunt-jslint');
