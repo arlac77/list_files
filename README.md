@@ -1,6 +1,6 @@
 # list_files
 
-crawls a directory for files.
+crawls a directory recursively for files.
 
 [![Build Status](https://secure.travis-ci.org/arlac77/list_files.png)](http://travis-ci.org/arlac77/list_files)
 
