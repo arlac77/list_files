@@ -2,7 +2,7 @@
 
 crawls a directory recursively for files.
 
-[![Build Status](https://secure.travis-ci.org/arlac77/list_files.png)](http://travis-ci.org/arlac77/list_files)
+[![Build Status](https://secure.travis-ci.org/arlac77/list_files.png)](http://travis-ci.org/arlac77/list_files) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/arlac77/list_files/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 
 ## IMPORTANT
@@ -41,7 +41,4 @@ included LICENSE file for more details.
 
 "Node.js" and "node" are trademarks owned by Joyent, Inc.
 
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/arlac77/list_files/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
