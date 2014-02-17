@@ -41,3 +41,7 @@ included LICENSE file for more details.
 
 "Node.js" and "node" are trademarks owned by Joyent, Inc.
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/arlac77/list_files/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
