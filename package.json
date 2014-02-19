@@ -1,6 +1,14 @@
 {
   "name": "list_files",
-  "description": "crawls directory for files recursively",
+  "description": "walk a directory tree recursively",
+  "keywords": [
+      "find",
+      "walk",
+      "directory",
+      "recursive",
+      "tree",
+      "traversal"
+    ],
   "version": "0.1.1",
   "private": false,
   "engines": {
@@ -28,5 +36,6 @@
     "type": "git",
     "url": "git@github.com:arlac77/list_files.git"
   },
-  "main": "list_files.js"
+  "main": "list_files.js",
+   "license": "MIT"
 }
