@@ -2,13 +2,13 @@
   "name": "list_files",
   "description": "walk a directory tree recursively",
   "keywords": [
-      "find",
-      "walk",
-      "directory",
-      "recursive",
-      "tree",
-      "traversal"
-    ],
+    "find",
+    "walk",
+    "directory",
+    "recursive",
+    "tree",
+    "traversal"
+  ],
   "version": "0.1.1",
   "private": false,
   "engines": {
@@ -23,11 +23,7 @@
   },
   "devDependencies": {
     "vows": ">=0.6",
-    "mkdirp": ">=0.3",
-    "grunt": "~0.4.0",
-    "grunt-jslint": "~0.2.5",
-    "grunt-jsdoc": "~0.2.3",
-    "grunt-vows-runner": "~0.1.0"
+    "mkdirp": ">=0.3"
   },
   "scripts": {
     "test": "vows tests/*.js --isolate --spec"
@@ -37,5 +33,5 @@
     "url": "git@github.com:arlac77/list_files.git"
   },
   "main": "list_files.js",
-   "license": "MIT"
+  "license": "MIT"
 }

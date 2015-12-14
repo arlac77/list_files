@@ -1,44 +1,42 @@
-# list_files
+list_files
+==========
 
 crawls a directory recursively for files.
 
-[![Build Status](https://secure.travis-ci.org/arlac77/list_files.png)](http://travis-ci.org/arlac77/list_files) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/arlac77/list_files/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+[![npm](https://img.shields.io/npm/v/list_files.svg)](https://www.npmjs.com/package/list_files)[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/Kronos-Integration/list_files)[![Build Status](https://secure.travis-ci.org/Kronos-Integration/list_files.png)](http://travis-ci.org/Kronos-Integration/list_files)[![Coverage Status](https://coveralls.io/repos/Kronos-Integration/list_files/badge.svg)](https://coveralls.io/r/Kronos-Integration/list_files)[![Code Climate](https://codeclimate.com/github/Kronos-Integration/list_files/badges/gpa.svg)](https://codeclimate.com/github/Kronos-Integration/list_files)[![GitHub Issues](https://img.shields.io/github/issues/Kronos-Integration/list_files.svg?style=flat-square)](https://github.com/Kronos-Integration/list_files/issues)[![Dependency Status](https://david-dm.org/Kronos-Integration/list_files.svg)](https://david-dm.org/Kronos-Integration/list_files)[![devDependency Status](https://david-dm.org/Kronos-Integration/list_files/dev-status.svg)](https://david-dm.org/Kronos-Integration/list_files#info=devDependencies)[![docs](http://inch-ci.org/github/Kronos-Integration/list_files.svg?branch=master)](http://inch-ci.org/github/Kronos-Integration/list_files)[![downloads](http://img.shields.io/npm/dm/list_files.svg?style=flat-square)](https://npmjs.org/package/list_files)
 
+Quick Examples
+--------------
 
-## IMPORTANT
+```
+var list_files  = require('../lib/list_files').list_files;
 
-**You need node v0.6 or higher to run this program.**
+var cache = "CACHE MANIFEST\n# version 1\n\nCACHE:\n";
 
+list_files("docroot",
+    '',
+    /.*\.js$/,
+    function(error, file, fstat) {
+        // each matching file
+        cache += file + "\n";
+    },
+    function(error) {
+        // in the end
+        cache += "\nNETWORK:\n";
+});
+```
 
-## Quick Examples
+Download
+--------
 
-	var list_files  = require('../lib/list_files').list_files;
+```
+Releases are available for download from
+[GitHub](git@github.com:arlac77/list_files.git).
+```
 
-	var cache = "CACHE MANIFEST\n# version 1\n\nCACHE:\n";
+Legal Stuff
+-----------
 
-	list_files("docroot",
-		'',
-		/.*\.js$/,
-		function(error, file, fstat) {
-			// each matching file
-			cache += file + "\n";
-		},
-		function(error) {
-			// in the end
-			cache += "\nNETWORK:\n";
-  	});
-
-## Download
-
-	Releases are available for download from
-	[GitHub](git@github.com:arlac77/list_files.git).
-	
-## Legal Stuff
-
-"list_files" is owned by Markus Felten.  All
-rights not explicitly granted in the MIT license are reserved. See the
-included LICENSE file for more details.
+"list_files" is owned by Markus Felten. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE file for more details.
 
 "Node.js" and "node" are trademarks owned by Joyent, Inc.
-
-
