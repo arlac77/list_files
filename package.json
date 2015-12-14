@@ -35,8 +35,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:arlac77/list_files.git"
+    "url": "git+https://github.com/arlac77/list_files.git"
   },
+  "bugs": {
+    "url": "https://github.com/arlac77/list_files/issues"
+  },
+  "homepage": "https://github.com/arlac77/list_files#readme",
   "main": "list_files.js",
   "license": "MIT"
 }
