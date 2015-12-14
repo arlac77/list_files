@@ -15,9 +15,9 @@ before_install:
   - npm i -g npm@latest
 before_script:
   - npm prune
-script:
-  - npm run-script cover
-after_script:
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+#script:
+#  - npm run-script cover
+#after_script:
+#  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 after_success:
   - npm run semantic-release

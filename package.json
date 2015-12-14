@@ -23,9 +23,13 @@
   },
   "devDependencies": {
     "vows": ">=0.6",
-    "mkdirp": ">=0.3"
+    "mkdirp": ">=0.3",
+    "istanbul": "^0.4.0",
+    "semantic-release": "6.0.3"
   },
   "scripts": {
+    "cover": "node ./node_modules/istanbul/lib/cli.js cover --hook-run-in-context ./node_modules/mocha/bin/_mocha -- --R spec --U exports tests",
+    "doc": "jsdoc lib/*.js",
     "test": "vows tests/*.js --isolate --spec"
   },
   "repository": {
