@@ -3,12 +3,22 @@ list_files
 
 crawls a directory recursively for files.
 
-[![npm](https://img.shields.io/npm/v/list_files.svg)](https://www.npmjs.com/package/list_files)[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/Kronos-Integration/list_files)[![Build Status](https://secure.travis-ci.org/Kronos-Integration/list_files.png)](http://travis-ci.org/Kronos-Integration/list_files)[![Coverage Status](https://coveralls.io/repos/Kronos-Integration/list_files/badge.svg)](https://coveralls.io/r/Kronos-Integration/list_files)[![Code Climate](https://codeclimate.com/github/Kronos-Integration/list_files/badges/gpa.svg)](https://codeclimate.com/github/Kronos-Integration/list_files)[![GitHub Issues](https://img.shields.io/github/issues/Kronos-Integration/list_files.svg?style=flat-square)](https://github.com/Kronos-Integration/list_files/issues)[![Dependency Status](https://david-dm.org/Kronos-Integration/list_files.svg)](https://david-dm.org/Kronos-Integration/list_files)[![devDependency Status](https://david-dm.org/Kronos-Integration/list_files/dev-status.svg)](https://david-dm.org/Kronos-Integration/list_files#info=devDependencies)[![docs](http://inch-ci.org/github/Kronos-Integration/list_files.svg?branch=master)](http://inch-ci.org/github/Kronos-Integration/list_files)[![downloads](http://img.shields.io/npm/dm/list_files.svg?style=flat-square)](https://npmjs.org/package/list_files)
+[![npm](https://img.shields.io/npm/v/list_files.svg)](https://www.npmjs.com/package/list_files)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/arlac77/list_files)
+[![Build Status](https://secure.travis-ci.org/arlac77/list_files.png)](http://travis-ci.org/arlac77/list_files)
+[![bithound](https://www.bithound.io/github/arlac77/list_files/badges/score.svg)](https://www.bithound.io/github/arlac77/list_files)
+[![Coverage Status](https://coveralls.io/repos/arlac77/list_files/badge.svg?branch=master&service=github)](https://coveralls.io/github/arlac77/list_files?branch=master)
+[![Test Coverage](https://codeclimate.com/github/arlac77/list_files/badges/coverage.svg)](https://codeclimate.com/github/arlac77/list_files/coverage)
+[![GitHub Issues](https://img.shields.io/github/issues/arlac77/list_files.svg?style=flat-square)](https://github.com/arlac77/list_files/issues)
+[![Dependency Status](https://david-dm.org/arlac77/list_files.svg)](https://david-dm.org/arlac77/list_files)
+[![devDependency Status](https://david-dm.org/arlac77/list_files/dev-status.svg)](https://david-dm.org/arlac77/list_files#info=devDependencies)
+[![docs](http://inch-ci.org/github/arlac77/list_files.svg?branch=master)](http://inch-ci.org/github/arlac77/list_files)
+[![downloads](http://img.shields.io/npm/dm/list_files?style=flat-square)](https://npmjs.org/package/list_files)
 
 Quick Examples
 --------------
 
-```
+```javscript
 var list_files  = require('../lib/list_files').list_files;
 
 var cache = "CACHE MANIFEST\n# version 1\n\nCACHE:\n";
