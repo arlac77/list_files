@@ -19,7 +19,7 @@
     "email": "Markus.Felten@gmx.de"
   },
   "dependencies": {
-    "async": "^2.3.0"
+    "async": "^2.5.0"
   },
   "devDependencies": {
     "vows": "^0.8.1",
