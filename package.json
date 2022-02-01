@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "vows": "^0.8.1",
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^1.0.4",
     "istanbul": "^0.4.5",
     "semantic-release": "17.4.7"
   },
